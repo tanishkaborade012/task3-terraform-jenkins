@@ -3,5 +3,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "demo_bucket" {
-  bucket = "jenkins-bucket-1"
+  bucket = "jenkins-bucket-tanishka"
 }
