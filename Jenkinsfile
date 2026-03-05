@@ -1,13 +1,12 @@
 pipeline {
     agent any
 
-    stages {
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
+    }
 
-        stage('Clone Repo') {
-            steps {
-                checkout scm
-            }
-        }
+    stages {
 
         stage('Terraform Init') {
             steps {
